@@ -8,11 +8,11 @@ This repository is dedicated to brute-force password guesses for Trench Crusade 
 
 ## Run
 
-    python3 main.py --help
+    python3 grunt.py --help
 
 ## Example
 
-    python3 .\main.py -c YOUR_CRUMB -d YOUR_ID -ch YOUR_CHANNEL_ID
+    python3 grunt.py -c YOUR_CRUMB -d YOUR_ID -ch YOUR_CHANNEL_ID
 
 ## Crumb
 
