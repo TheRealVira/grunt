@@ -34,7 +34,7 @@ parser.add_argument(
 parser.add_argument(
     "-g", "--generate",
     help="Whether or not to generate passwords before testing.",
-    default=True,
+    default=False,
     action="store_true"
 )
 
