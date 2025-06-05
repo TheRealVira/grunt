@@ -12,7 +12,13 @@ This repository is dedicated to brute-force password guesses for Trench Crusade 
 
 ## Example
 
-    python3 grunt.py -c YOUR_CRUMB -d YOUR_ID -ch YOUR_CHANNEL_ID
+Without password generation:
+
+    python3 grunt.py -c YOUR_CRUMB
+
+With password generation:
+
+    python3 grunt.py -g -c YOUR_CRUMB -d YOUR_ID -ch YOUR_CHANNEL_ID
 
 ## Crumb
 
