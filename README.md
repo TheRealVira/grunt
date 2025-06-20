@@ -10,6 +10,7 @@ A brute-force tool for password guessing in the [Trench Crusade ARG](https://www
 - Optionally generate password candidates from Discord channel messages
 - Tracks tested passwords to avoid duplicates
 - Supports Discord API integration for message scraping
+- **Customizable collection ID for targeting different collections**
 
 ---
 
@@ -37,6 +38,12 @@ Brute-force using a wordlist:
 python grunt.py -c YOUR_CRUMB
 ```
 
+### Specify a Collection ID
+
+```sh
+python grunt.py -c YOUR_CRUMB --collection-id YOUR_COLLECTION_ID
+```
+
 ### With Password Generation from Discord
 
 Generate passwords from Discord messages before testing:
@@ -49,16 +56,17 @@ python grunt.py -g -c YOUR_CRUMB -d YOUR_DISCORD_TOKEN -ch YOUR_CHANNEL_ID
 
 ## Arguments
 
-| Argument         | Description                                      | Required | Default         |
-|------------------|--------------------------------------------------|----------|-----------------|
-| `-c, --crumb`    | Session crumb (cookie) for authentication        | Yes      | —               |
-| `-t, --test`     | File with potential passwords                    | No       | `test.txt`      |
-| `-td, --tested`  | File to store all tested passwords               | No       | `tested.txt`    |
-| `-g, --generate` | Generate passwords from Discord messages         | No       | `False`         |
-| `-d, --discord`  | Discord API token                                | If `-g`  | —               |
-| `-ch, --channel` | Discord channel ID                               | If `-g`  | —               |
-| `-l, --limit`    | Discord message fetch limit                      | No       | `100`           |
-| `-s, --start`    | First relevant Discord message ID                | No       | (preset value)  |
+| Argument                | Description                                      | Required | Default                  |
+|-------------------------|--------------------------------------------------|----------|--------------------------|
+| `-c, --crumb`           | Session crumb (cookie) for authentication        | Yes      | —                        |
+| `-t, --test`            | File with potential passwords                    | No       | `test.txt`               |
+| `-td, --tested`         | File to store all tested passwords               | No       | `tested.txt`             |
+| `-g, --generate`        | Generate passwords from Discord messages         | No       | `False`                  |
+| `-d, --discord`         | Discord API token                                | If `-g`  | —                        |
+| `-ch, --channel`        | Discord channel ID                               | If `-g`  | —                        |
+| `-l, --limit`           | Discord message fetch limit                      | No       | `100`                    |
+| `-s, --start`           | First relevant Discord message ID                | No       | (preset value)           |
+| `-cid, --collection-id` | Collection ID to brute-force against             | No       | `680897a38eba8b1b034f8e1d` |
 
 ---
 
